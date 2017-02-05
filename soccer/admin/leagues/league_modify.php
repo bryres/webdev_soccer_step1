@@ -10,21 +10,23 @@
     <link href="styles_add_modify.css<?php echo(getVersionString()); ?>" rel="stylesheet">
 
 </head>
-
 <body>
 <form action="." method="post">
     <input type="hidden" name="action" value="modify_league">
-    <div id="box">
-        <div id="wrapper">
-            <div id ="columns">
+    <div class="box">
+        <div class="wrapper">
+            <div class="columns">
                 <h1 class="title">Modify League</h1>
 
                 <input type="hidden" name="action" value="modify_league">
                 <input type="hidden" name="league_id" value="<?php echo htmlspecialchars($league_id); ?>">
-                <label>League name</label>
-                <input type="text" placeholder="League Name" name="league_name" value="<?php echo htmlspecialchars($league_name);?>" autofocus required>
 
-                <div id="button-div">
+                <div class="row">
+                    <label>Last Name</label>
+                    <input type="text" name="league_name" value="<?php echo htmlspecialchars($league_name);?>" autofocus required>
+                </div>
+
+                <div class="button-div">
                     <button style="cursor: pointer" class="submit s" type="submit" name="choice" value="Modify">Submit</button>
                     <button style="cursor: pointer" class="submit b" type="submit" name="choice" value="Back" formnovalidate>Cancel</button>
                 </div>

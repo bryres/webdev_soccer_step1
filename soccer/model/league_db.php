@@ -43,7 +43,7 @@ function add_league($league_name) {
 }
 
 
-function modify_league($league_name, $league_id) {
+function modify_league($league_id, $league_name) {
     global $db;
     $query = 'update league set
                  league_name = :league_name

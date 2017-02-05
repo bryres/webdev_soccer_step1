@@ -49,7 +49,7 @@ switch ($action) {
                     </a>
                 </td>
                 <td>
-                    <a href="league">
+                    <a href="leagues">
                         <div class="feature">
                             <h2>Leagues</h2>
                             <h4>Manage the list of soccer leagues</h4>

@@ -53,7 +53,7 @@ switch ($action) {
         $coach_phone_nbr = $coach['coach_phone_nbr'];
         $coach_email = $coach['coach_email'];
 
-        include 'coach_modify_delete.php';
+        include 'coach_modify.php';
         exit();
         break;
 

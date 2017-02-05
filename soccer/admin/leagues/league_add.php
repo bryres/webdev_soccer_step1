@@ -13,17 +13,19 @@
 <body>
 <form action="." method="post">
     <input type="hidden" name="action" value="add_league">
-    <div id="box">
-        <div id="wrapper">
-            <div id ="columns">
+    <div class="box">
+        <div class="wrapper">
+            <div class="columns">
                 <h1 class="title">Add League</h1>
 
                 <input type="hidden" name="action" value="add_league">
 
-                <label>League Name</label>
-                <input type="text" name="league_name" autofocus required>
+                <div class="row">
+                    <label>Name</label>
+                    <input type="text" name="league_name" autofocus required>
+                </div>
 
-                <div id="button-div">
+                <div class="button-div">
                     <button style="cursor: pointer" class="submit s" type="submit" name="choice" value="Add">Submit</button>
                     <button style="cursor: pointer" class="submit b" type="submit" name="choice" value="Back" formnovalidate>Cancel</button>
                 </div>

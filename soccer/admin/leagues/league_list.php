@@ -23,42 +23,44 @@
         <header>
             <h1 class="title">Leagues</h1>
         </header>
-        <div class="button-wrap">
-            <a href="./index.php?league_id=<?php echo $league_id ?>&action=show_add_league"><button id="add_league" class="s">Add League</button></a>
-            <a href="../index.php"><button id="return_home" class="b">Back</button></a>
+        <div style="text-align:center;padding-bottom:2vh;">
+            <a href="./index.php?action=show_add_league">
+                <button style="cursor: pointer" class="s">Add New</button>
+            </a>
+            <a href="../index.php">
+                <button style="cursor: pointer" class="b">Back</button>
+            </a>
         </div>
-
-        <nav style="width:60em;" class="navbar">
-            <div id="navinside">
-                <a href="#">
-                    <div id="namenav" class="session-filter"><h2><strong>League</strong></h2></div>
-                </a>
-            </div>
+        <nav class="navbar" style="">
+            <div class="cell widecol">Name</div>
+            <div class="cell delcol"></div>
         </nav>
 
 
-        <div style="width:60em;" class="list-container">
+        <div class="list-container" style="">
 
             <?php foreach ($leagueList as $league) {
                 $league_id = $league['league_id'];
                 $league_name = $league['league_name'];
-
                 ?>
-
-                <div class="mentor" id="league">
-                    <div class="session-filter league_name" onclick="javascript:location.href='./index.php?league_id=<?php echo $league_id ?>&action=show_modify_league'"><h2><?php echo($league_name); ?></h2></div>
-                    <div style="float:right;">
-                        <div class="session-filter delete">
-                            <h4 class="del_icon" onclick="deleteLeague(<?php echo $league_id; ?>);">d</h4>
+                <div class="row">
+                    <div class="wrapper">
+                        <div class="clickable" onclick="javascript:location.href='./index.php?league_id=<?php echo $league_id ?>&action=show_modify_league'">
+                            <div class="cell widecol"><?php echo $league_name; ?>&nbsp</div>
+                        </div>
+                        <div class="cell delcol">
+                            <div class="del_icon" onclick="deleteLeague(<?php echo $league_id; ?>);">d</div>
                         </div>
                     </div>
                 </div>
 
             <?php } ?>
         </div>
-        <script type="text/javascript" src="../../js/jquery.min.js<?php echo(getVersionString()); ?>"></script>
-        <script type="text/javascript" src="../../js/jquery.easing.min.js<?php echo(getVersionString()); ?>"></script>
-        <script type="text/javascript" src="../../js/jquery.plusanchor.min.js<?php echo(getVersionString()); ?>"></script>
+
+        <script type="text/javascript" src="../../admin/js/jquery.min.js<?php echo(getVersionString()); ?>"></script>
+        <script type="text/javascript" src="../../admin/js/jquery.easing.min.js<?php echo(getVersionString()); ?>"></script>
+        <script type="text/javascript" src="../../admin/js/jquery.plusanchor.min.js<?php echo(getVersionString()); ?>"></script>
+        <script type="text/javascript" src="../../admin/js/featherlight.min.js<?php echo(getVersionString()); ?>"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 $('body').plusAnchor({
@@ -72,7 +74,5 @@
             })
 
         </script>
-
-
     </body>
 </html>
