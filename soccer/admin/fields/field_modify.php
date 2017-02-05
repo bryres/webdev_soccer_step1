@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Modify League</title>
+    <title>Modify Field</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
@@ -12,18 +12,18 @@
 </head>
 <body>
 <form action="." method="post">
-    <input type="hidden" name="action" value="modify_league">
+    <input type="hidden" name="action" value="modify_field">
     <div class="box">
         <div class="wrapper">
             <div class="columns">
-                <h1 class="title">Modify League</h1>
+                <h1 class="title">Modify Field</h1>
 
-                <input type="hidden" name="action" value="modify_league">
-                <input type="hidden" name="league_id" value="<?php echo htmlspecialchars($league_id); ?>">
+                <input type="hidden" name="action" value="modify_field">
+                <input type="hidden" name="field_id" value="<?php echo htmlspecialchars($field_id); ?>">
 
                 <div class="row">
                     <label>Name</label>
-                    <input type="text" name="league_name" value="<?php echo htmlspecialchars($league_name);?>" autofocus required>
+                    <input type="text" name="field_name" value="<?php echo htmlspecialchars($field_name);?>" autofocus required>
                 </div>
 
                 <div class="button-div">
