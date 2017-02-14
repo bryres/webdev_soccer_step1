@@ -57,6 +57,14 @@ switch ($action) {
                     </a>
                 </td>
                 <td>
+                    <a href="teams">
+                        <div class="feature">
+                            <h2>Teams</h2>
+                            <h4>Manage the list of teams</h4>
+                        </div>
+                    </a>
+                </td>
+                <td>
                     <a href="coaches">
                         <div class="feature">
                             <h2>Coaches</h2>

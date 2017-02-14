@@ -308,7 +308,7 @@ button {
   -moz-transition: all 175ms ease;
   transition: all 175ms ease; }
 
-input {
+input, select {
   height: 3em;
   width: 15em;
   margin: 0.5em 0 0.5em 0;
